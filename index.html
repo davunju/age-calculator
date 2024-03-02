@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="img/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Age Calculator</title>
+  </head>
+  <body class="bg-offWhite font-poppins">
+    <main
+      class="w-[50%] bg-white absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-10 shadow rounded-2xl rounded-br-[7rem]"
+    >
+      <form class="uppercase flex w-[70%] gap-5" id="form">
+        <section>
+          <label for="day" class="block mb-2 text-xs font-bold text-smokeyGrey"
+            >Day</label
+          >
+          <input
+            type="text"
+            name="day"
+            id="day"
+            placeholder="DD"
+            class="block border borrder-2 w-full font-extrabold cursor-pointer rounded-lg p-3 placeholder:text-xl placeholder:font-bold max-[890px]:placeholder:text-lg max-[780px]:placeholder:hidden outline-none"
+          />
+          <div
+            id="error"
+            class="lowercase text-xs italic mt-2 text-lightRed"
+          ></div>
+        </section>
+        <section>
+          <label
+            for="month"
+            class="block mb-2 text-xs font-bold text-smokeyGrey"
+            >Month</label
+          >
+          <input
+            type="text"
+            name="month"
+            id="month"
+            placeholder="MM"
+            class="block border borrder-2 w-full font-extrabold cursor-pointer rounded-lg p-3 placeholder:text-xl max-[890px]:placeholder:text-sm placeholder:font-bold outline-none"
+          />
+          <div
+            id="error"
+            class="lowercase text-xs italic mt-2 text-lightRed"
+          ></div>
+        </section>
+        <section>
+          <label for="year" class="block mb-2 text-xs font-bold text-smokeyGrey"
+            >Year</label
+          >
+          <input
+            type="text"
+            name="year"
+            id="year"
+            placeholder="YYYY"
+            class="block border borrder-2 p-3 w-full font-extrabold cursor-pointer rounded-lg placeholder:text-xl max-[890px]:placeholder:text-lg placeholder:font-bold outline-none"
+          />
+          <div
+            id="error"
+            class="lowercase text-xs italic mt-2 text-lightRed"
+          ></div>
+        </section>
+      </form>
+      <section class="flex gap-0 items-center">
+        <hr class="w-full" />
+        <button id="btn">
+          <img
+            src="img/icon-arrow.svg"
+            class="bg-purple p-3 rounded-full cursor-pointer hover:bg-offBlack"
+          />
+        </button>
+      </section>
+      <section
+        class="text-[4rem] max-[990px]:text-[3rem] font-extrabold italic leading-[1.27]"
+      >
+        <div>
+          <span class="text-purple" id="yr">--</span>
+          years
+        </div>
+        <div>
+          <span class="text-purple" id="mnth">--</span>
+          months
+        </div>
+        <div>
+          <span class="text-purple" id="dys">--</span>
+          days
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
