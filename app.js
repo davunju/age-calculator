@@ -5,11 +5,8 @@ const yearDisplay = document.querySelector("#yr");
 const monthDisplay = document.querySelector("#mnth");
 const dayDisplay = document.querySelector("#dys");
 const button = document.getElementById("btn");
-//const dayError = document.querySelector("#error1");
-//const monthError = document.querySelector("#error2");
-//const yearError = document.querySelector("#error3");
 const errors = document.querySelectorAll("#error");
-const form = document.getElementById("form");
+const labels = document.querySelectorAll("label");
 
 const isRequired = (value) => (value === "" ? false : true);
 
@@ -37,15 +34,6 @@ function getYearsOld() {
   }
 }
 
-/*const showError = (message) => {
-  const dayError = document.querySelector("#error1");
-  const monthError = document.querySelector("#error2");
-  const yearError = document.querySelector("#error3");
-  dayError.textContent = message;
-  monthError.textContent = message;
-  yearError.textContent = message;
-};
-*/
 errors.forEach((error) => {
   button.addEventListener("click", (e) => {
     e.preventDefault();
@@ -54,8 +42,14 @@ errors.forEach((error) => {
       yob = year.value;
     if (!isRequired(dob) || !isRequired(mob) || !isRequired(yob)) {
       error.textContent = "This field is required";
+      labels.forEach((label) => {
+        label.style.color = "hsl(0, 100%, 67%)";
+      });
     } else {
       error.textContent = "";
+      labels.forEach((label) => {
+        label.style.color = "hsl(0, 1%, 44%)";
+      });
       getYearsOld();
     }
   });
