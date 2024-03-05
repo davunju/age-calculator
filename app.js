@@ -58,7 +58,7 @@ const yearValid = () => {
   if (year.value > new Date().getFullYear()) {
     errorYear.textContent = "Must be in the past";
   } else {
-    errorMonth.textContent = "";
+    errorYear.textContent = "";
   }
 };
 
@@ -103,8 +103,22 @@ const checkYear = () => {
   }
 };
 
-errors.forEach((error) => {
-  button.addEventListener("click", (e) => {
-    e.preventDefault();
-  });
+form.addEventListener("input", (e) => {
+  switch (e.target.id) {
+    case "day":
+      checkDay();
+      break;
+    case "month":
+      checkMonth();
+      break;
+    case "year":
+      checkYear();
+      break;
+  }
+});
+
+button.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (checkDay() || checkMonth() || checkYear()) {
+  }
 });
