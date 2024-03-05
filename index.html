@@ -21,7 +21,7 @@
     <main
       class="w-[50%] max-[680px]:w-[90%] bg-white absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-10 shadow rounded-2xl rounded-br-[7rem]"
     >
-      <form class="uppercase flex w-[70%] gap-5 max-[680px]:w-full" id="form">
+      <form class="uppercase flex gap-5 w-[80%] max-[900px]:w-full" id="form">
         <section>
           <label for="day" class="block mb-2 text-xs font-bold text-smokeyGrey"
             >Day</label
@@ -35,7 +35,7 @@
           />
           <div
             id="error"
-            class="error-day lowercase text-xs italic mt-2 text-lightRed"
+            class="error-day lowercase text-xs italic mt-2 text-lightRed max-[1290px]:text-[10px]"
           ></div>
         </section>
         <section>
@@ -53,7 +53,7 @@
           />
           <div
             id="error"
-            class="error-month lowercase text-xs italic mt-2 text-lightRed"
+            class="error-month lowercase text-xs italic mt-2 text-lightRed max-[1290px]:text-[10px]"
           ></div>
         </section>
         <section>
@@ -69,17 +69,17 @@
           />
           <div
             id="error"
-            class="error-year lowercase text-xs italic mt-2 text-lightRed"
+            class="error-year lowercase text-xs italic mt-2 text-lightRed max-[1290px]:text-[10px]"
           ></div>
         </section>
       </form>
       <section class="my-3 flex items-center">
         <hr class="w-full" />
-        <button id="btn">
-          <img
-            src="img/icon-arrow.svg"
-            class="bg-purple p-3 rounded-full cursor-pointer hover:bg-offBlack"
-          />
+        <button
+          id="btn"
+          class="bg-purple p-3 rounded-full cursor-pointer hover:bg-offBlack"
+        >
+          <img src="img/icon-arrow.svg" />
         </button>
       </section>
       <section
