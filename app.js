@@ -62,20 +62,6 @@ const yearValid = () => {
   }
 };
 
-form.addEventListener("input", (e) => {
-  switch (e.target.id) {
-    case "day":
-      dayValid();
-      break;
-    case "month":
-      monthValid();
-      break;
-    case "year":
-      yearValid();
-      break;
-  }
-});
-
 const checkDay = () => {
   const dob = day.value;
   if (!isRequired(dob)) {
