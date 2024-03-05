@@ -106,5 +106,7 @@ form.addEventListener("input", (e) => {
 button.addEventListener("click", (e) => {
   e.preventDefault();
   if (checkDay() || checkMonth() || checkYear()) {
+  } else {
+    getYearsOld();
   }
 });
