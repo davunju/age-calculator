@@ -10,7 +10,6 @@ const errorDay = document.querySelector(".error-day");
 const errorMonth = document.querySelector(".error-month");
 const errorYear = document.querySelector(".error-year");
 const form = document.querySelector("form");
-const inputs = document.querySelectorAll("input");
 
 const isRequired = (value) => (value === "" ? false : true);
 
