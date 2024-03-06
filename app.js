@@ -104,12 +104,6 @@ form.addEventListener("input", (e) => {
 });
 
 button.addEventListener("click", (e) => {
-  e.preventDefault();
-  errors.forEach((error) => {
-    if (checkDay() || checkMonth() || checkYear()) {
-      error.textContent = "this field is required";
-    } else {
-      getYearsOld();
-    }
-  });
+ e.preventDefault();
+  
 });
