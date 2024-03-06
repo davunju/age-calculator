@@ -106,6 +106,9 @@ form.addEventListener("input", (e) => {
 button.addEventListener("click", (e) => {
   e.preventDefault();
   if (checkDay() || checkMonth() || checkYear()) {
+    dayDisplay.textContent = "--";
+    monthDisplay.textContent = "--";
+    yearDisplay.textContent = "--";
   } else {
     getYearsOld();
   }
